@@ -62,6 +62,7 @@ export const Input = styled.TextInput`
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   font-size: 17px;
+  color: #fff;
 `;
 
 export const ButtonLink = styled.TouchableOpacity`
@@ -71,7 +72,7 @@ export const ButtonLink = styled.TouchableOpacity`
   background-color: #fff;
   margin: 0 15px;
   border-radius: 7px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 `;
 
 export const ButtonLinkText = styled.Text`

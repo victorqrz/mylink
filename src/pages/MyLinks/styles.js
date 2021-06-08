@@ -9,6 +9,7 @@ export const Container = styled.View`
 export const Title = styled.Text`
   margin-top: ${ Platform.OS === 'ios' ? 35+'%' : 20+'%' };
   margin-left: 20px;
+  margin-bottom: 8px;
   font-size: 33px;
   font-weight: bold;
   color: #fff;

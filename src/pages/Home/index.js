@@ -10,6 +10,7 @@ import { ContainerLogo, Logo, ContainerContent, Title, SubTitle, ContainerInput,
 import ModalLink from '../../components/ModalLink';
 
 import api from '../../services/api';
+import { saveLink } from '../../utils/storelinks';
 
 export default function Home(){
 
@@ -26,8 +27,9 @@ export default function Home(){
       });
 
       setData(response.data);
-
       setModalVisible(true)
+
+      saveLink('sujeitoLinks', response.data);
 
       Keyboard.dismiss();
       setLoading(false);

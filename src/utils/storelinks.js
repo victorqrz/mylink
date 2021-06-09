@@ -19,10 +19,17 @@ export async function saveLink(key, newLink){
   }
 
   linksStored.push(newLink);
+  
   await AsyncStorage.setItem(key, JSON.stringify(linksStored));
   console.log('LINK SALVO COM SUCESSO');
 }
 
 export async function deleteLink(links, id){
-  
+  let myLinks = links.filter( (item) => {
+    return (item.id !== id)
+  });
+  await AsyncStorage.setItem('sujeitoLinks',JSON.stringify(myLinks));
+
+  console.log('LINK DELETADO DO STORAGE');
+  return myLinks;
 }

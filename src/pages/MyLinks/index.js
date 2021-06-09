@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Modal } from 'react-native';
+import { Modal, ActivityIndicator } from 'react-native';
+
+import { useIsFocused } from '@react-navigation/native';
 
 import Menu from '../../components/Menu';
 import StatusBarPage from '../../components/StatusBarPage'
-import { Container, Title, ListLinks } from './styles';
 import ListItem from '../../components/ListItem';
-import { useIsFocused } from '@react-navigation/native';
 import ModalLink from '../../components/ModalLink';
 
-import { getLinksSaved } from '../../utils/storelinks';
+import { getLinksSaved, deleteLink } from '../../utils/storelinks';
+
+import { Container, Title, ListLinks, ContainerEmpty, WarningText } from './styles';
 
 export default function MyLinks(){
   const isFocused = useIsFocused();
@@ -16,11 +18,13 @@ export default function MyLinks(){
   const [links, setLinks] = useState([]);
   const [data, setData] = useState({});
   const [modalVisible, setModalVisible] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getLinks(){
       const result = await getLinksSaved('sujeitoLinks');
       setLinks(result);
+      setLoading(false);
     }
 
     getLinks();
@@ -29,6 +33,11 @@ export default function MyLinks(){
   function handleItem(item){
     setData(item);
     setModalVisible(true);
+  }
+
+  async function handleDelete(id){
+    const result = await deleteLink(links, id);
+    setLinks(result);
   }
 
   return(
@@ -42,10 +51,31 @@ export default function MyLinks(){
       
       <Title>Meus links</Title>
 
+      { loading && (
+        <ContainerEmpty>
+          <ActivityIndicator color="#fff" size={25}/>
+        </ContainerEmpty>
+      )}
+
+      { !loading && links.length === 0 && (
+        <ContainerEmpty>
+          <WarningText>
+            Você ainda não possui nenhum link :(    
+          </WarningText>
+        </ContainerEmpty>
+      )}
+
       <ListLinks
         data={links}
         keyExtractor={ (item) => String(item.id) }
-        renderItem={ ({ item }) =>  <ListItem data={item} selectedItem={handleItem} />}
+        renderItem={ 
+          ({ item }) => 
+            <ListItem 
+              data={item} 
+              selectedItem={handleItem}
+              deleteItem={handleDelete} 
+            />
+        }
         contentContainerStyle={{ paddingBottom: 25 }}
         showsVerticalScrollIndicator={false}
       />

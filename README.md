@@ -2,8 +2,6 @@
 
 > Um simples encurtador de links utilizando a API do Bitly
 
-> Possui suporte ao idioma Português e Ingles (De acordo com o idioma do sistema).
-
 ### 🏠 [Homepage](https://github.com/victorqrz/mylink)
 
 ## Requisitos

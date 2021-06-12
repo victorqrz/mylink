@@ -30,11 +30,11 @@ expo start
 ```
 ## Capturas de tela
 <p align="center">  
-  <img  align="center" src="./images/print1.jpeg" style="height:500px margin:10px"/>
-  <img  align="center" src="./images/print2.jpeg" style="height:500px margin:10px"/>
-  <img  align="center" src="./images/print3.jpeg" style="height:500px margin:10px"/>
-  <img  align="center" src="./images/print4.jpeg" style="height:500px margin:10px"/>
-  <img  align="center" src="./images/print5.jpeg" style="height:500px margin:10px"/>
-  <img  align="center" src="./images/print6.jpeg" style="height:500px margin:10px"/>
+  <img  align="center" src="./images/print1.jpeg" style="height:300px;margin:10px"/>
+  <img  align="center" src="./images/print2.jpeg" style="height:300px margin:10px"/>
+  <img  align="center" src="./images/print3.jpeg" style="height:300px margin:10px"/>
+  <img  align="center" src="./images/print4.jpeg" style="height:300px margin:10px"/>
+  <img  align="center" src="./images/print5.jpeg" style="height:300px margin:10px"/>
+  <img  align="center" src="./images/print6.jpeg" style="height:300px margin:10px"/>
 </p>
 

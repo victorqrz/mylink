@@ -30,3 +30,9 @@ expo start
 ```
 ## Capturas de tela
 <img  align="center" src="./images/print1.jpeg" height="500"/>
+<img  align="center" src="./images/print2.jpeg" height="500"/>
+<img  align="center" src="./images/print3.jpeg" height="500"/>
+<img  align="center" src="./images/print4.jpeg" height="500"/>
+<img  align="center" src="./images/print5.jpeg" height="500"/>
+<img  align="center" src="./images/print6.jpeg" height="500"/>
+

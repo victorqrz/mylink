@@ -28,3 +28,5 @@ Entre no diretorio raiz(mylink) e execute o seguinte comando:
 ```sh
 expo start
 ```
+## Capturas de tela
+<img  align="center" src="./blob/master/images/print1.jpeg"/>

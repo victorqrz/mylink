@@ -34,7 +34,7 @@ expo start
   <img  align="center" src="./images/print2.jpeg" height="500"/>
   <img  align="right" src="./images/print3.jpeg" height="500"/>
 </p>
-<p>
+<p align="center">
   <img  align="left" src="./images/print4.jpeg" height="500"/>
   <img  align="center" src="./images/print5.jpeg" height="500"/>
   <img  align="right" src="./images/print6.jpeg" height="500"/>
